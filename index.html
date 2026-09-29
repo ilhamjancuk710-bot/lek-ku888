@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja Lek - Demo Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Buka menu">☰</button>
+    <div class="brand"><div class="brand-icon" aria-hidden="true">♞</div><div><div class="brand-name">RAJA LEK</div><div class="brand-sub">DEMO</div></div></div>
+    <button class="demo-btn" id="demoBtn" type="button">Demo</button>
+  </header>
+  <main>
+    <section class="hero"><div><h1>Selamat Datang</h1><p>Di demo game dengan akun demo gratis.</p></div><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button></section>
+    <nav class="menu-grid" id="menuGrid" aria-label="Kategori">
+      <button class="menu-item active" data-name="Semua" type="button"><span>▦</span><b>SEMUA</b></button>
+      <button class="menu-item" data-name="Game" type="button"><span>♟</span><b>GAME</b></button>
+      <button class="menu-item" data-name="Artikel" type="button"><span>▤</span><b>ARTIKEL</b></button>
+      <button class="menu-item" data-name="Media" type="button"><span>◉</span><b>MEDIA</b></button>
+      <button class="menu-item" data-name="Info" type="button"><span>⚽</span><b>INFO</b></button>
+      <button class="menu-item" data-name="Berita" type="button"><span>★</span><b>BERITA</b></button>
+      <button class="menu-item" data-name="Komunitas" type="button"><span>♣</span><b>KOMUNITAS</b></button>
+      <button class="menu-item" data-name="Bantuan" type="button"><span>?</span><b>BANTUAN</b></button>
+      <button class="menu-item" data-name="Tentang" type="button"><span>ⓘ</span><b>TENTANG</b></button>
+    </nav>
+    <div class="search-box"><input id="searchInput" type="search" placeholder="Cari game atau kategori..." autocomplete="off"></div>
+    <section class="games-section" aria-labelledby="gamesTitle">
+      <div class="section-heading"><h2 id="gamesTitle">Game Collection</h2><span id="gameCount">8 game</span></div>
+      <div class="game-grid" id="gameGrid">
+        <article class="game-card" data-game="Adventure Game Explore Challenge"><div class="game-art art-adventure"></div><div class="game-info"><h3>ADVENTURE GAME</h3><p>Explore &amp; Challenge</p><div class="game-actions"><button class="play-btn" type="button" data-game-name="Adventure Game">PLAY NOW</button></div></div></article> 
+        <article class="game-card" data-game="Olympus Quest Mythology Adventure"><div class="game-art art-olympus"><img src="bg2.png" alt="Olympus Quest"></div><div class="game-info"><h3>MAHJONG SUPER SCATER</h3><p>SUPER SCATER</p><div class="game-actions"><button class="play-btn" type="button" data-game-name="Olympus Quest">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="olympus 1000 Mania zeuz 1000x"><div class="game-art art-mania"aria-label="Olympus Quest"><video src="bg3.mp4" autoplay muted loop playsinline></video></div><div class="game-info"><h3>OLYMPUS 1000x</h3><p>ZEUZ 1000x</p><div class="game-actions"></video><button class="play-btn" type="button" data-game-name="Game Mania">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="Western Quest Wild Adventure"><div class="game-art art-western"><img src="bg.4.jpeg" alt="Western Quest"></div><div class="game-info"><h3>SUGAR BONANZA</h3><p>SUPER POT</p><div class="game-actions"><button class="play-btn" type="button" data-game-name="Western Quest">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="Ocean Adventure Discover Sea"><div class="game-art art-ocean"><img src="princes.gif" alt="Ocean Adventure"></div><div class="game-info"><h3>PRINCESS 100x</h3><p>STAR PRINCESS</p><div class="game-actions"></video><button class="play-btn" type="button" data-game-name="Ocean Adventure">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="Fantasy World Enter Fantasy"><div class="game-art art-fantasy"><img src="bg6.png" alt="Fantasy World"></div><div class="game-info"><h3>FANTASY WORLD</h3><p>Enter The Fantasy</p><div class="game-actions"><button class="play-btn" type="button" data-game-name="Fantasy World">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="Treasure Hunt Find Treasure"><div class="game-art art-treasure"><img src="bg7.png" alt="Treasure Hunt"></div><div class="game-info"><h3>TREASURE HUNT</h3><p>Find The Treasure</p><div class="game-actions"></videoautoplay><button class="play-btn" type="button" data-game-name="Treasure Hunt">PLAY NOW</button></div></div></article>
+        <article class="game-card" data-game="Dragon Quest Legendary Adventure"><div class="game-art art-dragon"><img src="bg8.png" alt="Dragon Quest"></div><div class="game-info"><h3>DRAGON QUEST</h3><p>Legendary Adventure</p><div class="game-actions"><button class="play-btn" type="button" data-game-name="Dragon Quest">PLAY NOW</button></div></div></article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Game tidak ditemukan.</p>
+    </section>
+    <section class="link-card"><div class="link-text"><h2>Simpan Link Resmi Kami</h2><p class="highlight" id="selectedLink">contoh-domain.test/demo</p><label for="linkSelect">Pilih Link Alternatif:</label><select id="linkSelect"><option value="contoh-domain.test/demo">contoh-domain.test/demo</option><option value="demo.example.com">demo.example.com</option><option value="localhost:5500">localhost:5500</option></select><button class="copy-btn" id="copyBtn" type="button">Salin Link</button><p class="note">* Tombol ini menyalin link demo ke clipboard.</p></div><div class="qr-demo" aria-label="Kode QR demo"><div class="qr-pattern"><span>▦</span><span>▣</span><span>▦</span><span>▣</span><span>▦</span><span>▣</span><span>▦</span><span>▣</span><span>▦</span></div><strong>DEMO QR</strong></div></section>
+    <section class="banner-card"><div class="banner-logo">♞</div><div><h2>RAJALEK</h2><p>Demo landing page</p></div></section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
